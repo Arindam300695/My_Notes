@@ -1,0 +1,69 @@
+What is Version Control System?
+
+Version Control is the process of practicing tracking and managing changes to software code, Version Control System is a category of software tools that helps in recording changes made to files by keeping a track of modifications done in the code or has all the version of the source code. 
+
+Benefits of the version control system:->
+
+Enhances the project development speed by providing efficient collaboration,
+Leverages the productivity, expedites product delivery, and skills of the employees through better communication and assistance,
+Reduce possibilities of errors and conflicts meanwhile project development through traceability to every small change,
+Employees or contributors of the project can contribute from anywhere irrespective of the different geographical locations through this VCS,
+For each different contributor to the project, a different working copy is maintained and not merged to the main file unless the working copy is validated. The most popular example is Git, Helix core, Microsoft TFS,
+Helps in recovery in case of any disaster or contingent situation,
+Informs us about Who, What, When, Why changes have been made.
+
+Types of Version Control Systems:-> 
+
+Local Version Control Systems
+Centralized Version Control Systems
+Distributed Version Control Systems
+
+-> Git is a Distributed Version Control System.
+
+Let's now dive deep into git ->
+
+We need to remember certain codes to run Git or to give the Git the authority to track our files and their status.
+
+To intialize Git -> git init
+
+To check the status of our file or folders -> git status
+
+Now let's understand what is Git Branch ->
+Whenever we write the command "git init" we actually create a master or main branch. Now if we don't want any changes in our original code then we need to create another branch from our main branch and in this case we need to remember that as this branch is getting created from the main branch that's why this branch will also have a copy of the files and the folders that are there in the main branch.
+
+Now to create another branch we need to write  a command ->
+  git checkout -b itsTheSubBranch
+
+To add the files inside that Git repositery we need to write the command ->  git add .
+
+To commit we need to write the command -> git commit -m "This is my first commitment"
+
+If we accidentally delete the folders or files that are being tracked by Git, then we can restore those folders or files just by running the command -> git restore file_name(We need to keep in mind that if we dont commit any file then that file cannot be restored once it's deleted).
+
+If we want to move a file to unstaged area again which we have added to the staged area by mistake then we need to write a simple command -> git restore --staged file_name
+
+If we want to move a file to the staging area and do the commit both of the task together then we need to write a command -> git add file_name && git commit -m "this is a commit".
+
+Now let's see some cases of "undo" tasks ->
+-> If you want to undo the act of committing, leaving everything else intact, then use -> git reset --soft HEAD^
+-> If you want undo the act of committing, and also removing from the stagging area, then use -> git reset HEAD^
+-> If you want to completely undo, throwing away all uncommitted changes, resetting everything to the previous commit, then use ->
+git reset --hard HEAD^
+-> Deleting certain number of commits ->  git reset -soft HEAD~2(if we want to reset 2 files at a go) or git reset -soft HEAD~3(if we want to reset 3 files at a go).
+
+-> to see the the commit in crisp way we can use the command ->  git log --oneline
+-> if we want to show what all has happened in a commit we can use the command ->  git show commit_id / git show / git show HEAD~(no that we want to go back and HEAD represents the the recent commit)
+-> for undo we can use commands like -> git revert / git checkout commit_id / git clean / git rm
+
+
+Now let's learn about .gitignore file ->
+-> whatever content or files are there in this .gitignore file those file will be ignored by git, which means that git will not take those files to the staging area. let's see some usecases ->
+.gitignore----------------->  test.txt -> (git will ignore the test txt file)
+-----------------------------> .env -> (git will ignore .env file )
+-----------------------------> *.txt -> (git will ignore all the files which will have .txt extention)
+------------------------> !main.txt -> (git will ignore all the files with .txt extention except main.txt file)
+-----------------------------> temp/ -> (git will ignore the temp folder)
+-----------------------------> so like if we want git to ignore some files or folders we can just create a .gitignore file and then keep those files and folders inside that .gitignore file
+
+
+-------------------------------------->  Let's now start with GitHub  --------------------------------------->
