@@ -1,0 +1,17 @@
+.heading {
+  color: burlywood;
+  background-color: purple;
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: darksalmon;
+}
+.navbar a {
+  text-decoration: none;
+  color: brown;
+  padding: 15px;
+}

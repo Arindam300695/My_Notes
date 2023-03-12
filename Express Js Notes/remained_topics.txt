@@ -1,0 +1,3 @@
+in node js --> --> events topic is remaining
+in node js --> --> streams, buffers and pipes topic is remaining
+in express js --> --> validator and rest api topics are remaining

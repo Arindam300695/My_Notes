@@ -1,0 +1,20 @@
+doctype html
+html 
+    head 
+    style. 
+        .myPara{color:purple}
+        .form{display:flex; align-items:center; justify-content:space-evenly; background-color:beige;}
+    title="apunka page"
+    body 
+        p.myPara "Welcome to the pug template engine tutorial"
+        form(action="/" method="post").form
+            div 
+                label(for="productData")    Product data:
+                input(type="text" id="productData" name="products")
+            button Submit Data
+        h2 Your data will be visible below:
+        h3 
+            ul
+                - for (var i = 0; i < data.length; i++) {
+                    li= data [i]
+                - }

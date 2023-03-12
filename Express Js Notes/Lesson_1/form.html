@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+      #form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* grid-template-rows: 1fr 1fr; */
+        gap: 50px;
+        width: 40%;
+        margin: auto;
+        padding: 20px;
+        text-align: center;
+      }
+      #container {
+        width: 50%;
+        margin: auto;
+
+        padding: 20px;
+        background-color: aquamarine;
+      }
+      #btn {
+        text-align: center;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Register Here</h2>
+    <div id="container">
+      <form action="/userRegistration" method="post">
+        <div id="form">
+          <label for="fullName">Full-Name: </label>
+          <input type="text" name="fullName" id="fullName" />
+
+          <label for="age">Age: </label>
+          <input type="text" name="age" id="age" />
+
+          <label for="email">Email: </label>
+          <input type="email" name="email" id="email" />
+
+          <label for="contact">Contact No: </label>
+          <input type="contact" name="contact" id="contact" />
+        </div>
+
+        <div id="btn">
+          <button type="submit">Click here to Register</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
